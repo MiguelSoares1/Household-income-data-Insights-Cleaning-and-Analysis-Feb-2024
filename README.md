@@ -3,23 +3,17 @@
 ## Table of Contents
 1. [Project Background](#project-background)
 2. [Executive Summary](#Executive-Summary)
-3. [Challenges and Solutions](#Challenges-and-Solutions)
-4. [Recommendations](#Recommendations)
+3. [Recommendations](#Recommendations)
 
 ### Project Background
-Analysis of global life expectancy trends across countries to understand the impact
-of economic development (GDP), health factors (BMI), and development status on
-life expectancy outcomes between 2000-2015.
+Analysis of U.S. household income trends across states and counties to understand the impact of economic factors (mean and median income), land area, and income type distribution on regional income outcomes.
 
 ### Goals and Objectives
-1. Identify countries with the highest and lowest life expectancies.
+1. Identify states and counties with the highest and lowest average household incomes.
    
-2. Analyze life expectancy trends over time and by economic status (developing vs.
-developed).
-
-3. Explore correlations between GDP, BMI, and life expectancy.
+2. Analyze income trends across different income types and regions (e.g., urban vs. rural).
    
-4. Handle data quality issues such as duplicates and missing values to ensure robust
+3. Handle data quality issues such as duplicates and missing values to ensure robust
 analysis.
 
 ### Executive Summary
@@ -34,7 +28,8 @@ o Developed nations average 7.4 years longer life expectancy than developing
 ones
 o Adult mortality trends show consistent decline in most regions
 
-ADD DIAGRAM HERE
+![house income diagram](https://github.com/user-attachments/assets/0f72b57c-b671-4e25-8b12-116fe66b197b)
+
 
 ### Insights Deep-Dive
 Life Expectancy Trends
@@ -54,15 +49,6 @@ o Developing nations: 71.8 years
 
 o Sample size: 32 developed, 161 developing countries
 
-### Health Metrics
-1. BMI Correlation
-o High BMI countries show lower life expectancy
-o Regional variations significant
-o Strongest impact in developing nations
-2. Adult Mortality
-o Declining trend across 15 years
-o Faster improvement in developing nations
-o Significant regional variations
 
 ### Key Insights
 1. Life Expectancy Trends
@@ -87,16 +73,3 @@ economic development could improve overall health.
 Encourage programs to manage BMI, as lower BMIs correlate with higher life
 expectancy.
 
-### Challenges and Solutions
-
-Duplicate Records:
-o Issue: Multiple records for the same country and year.
-o Solution: Identified and removed duplicates using ROW_NUMBER().
-
-Missing Life Expectancy Data:
-o Issue: Blank Life_expectancy fields for some countries and years.
-o Solution: Used interpolation based on neighboring years&#39; data.
-
-Inconsistent Status Labels:
-o Issue: Blank or incorrect status fields for some countries.
-o Solution: Updated blank fields using the most frequent status for each country.

@@ -3,8 +3,8 @@
 ## Table of Contents
 1. [Project Background](#project-background)
 2. [Executive Summary](#Executive-Summary)
-3. [Challenges and Solutions](#)
-4. [Recommendations](#)
+3. [Challenges and Solutions](#Challenges-and-Solutions)
+4. [Recommendations](#Recommendations)
 
 ### Project Background
 Analysis of global life expectancy trends across countries to understand the impact

@@ -13,9 +13,12 @@ life expectancy outcomes between 2000-2015.
 
 ### Goals and Objectives
 1. Identify countries with the highest and lowest life expectancies.
+   
 2. Analyze life expectancy trends over time and by economic status (developing vs.
 developed).
+
 3. Explore correlations between GDP, BMI, and life expectancy.
+   
 4. Handle data quality issues such as duplicates and missing values to ensure robust
 analysis.
 
@@ -24,7 +27,9 @@ Analysis of worldwide life expectancy data reveals significant disparities betwe
 developed and developing nations, with a strong correlation between GDP and life
 outcomes. Key findings:
 o 14.8 year gap between highest and lowest life expectancy countries
+
 o Countries with GDP ≥$1,500 show 9.2 years higher life expectancy
+
 o Developed nations average 7.4 years longer life expectancy than developing
 ones
 o Adult mortality trends show consistent decline in most regions

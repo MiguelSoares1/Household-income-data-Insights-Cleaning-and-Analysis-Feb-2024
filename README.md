@@ -42,11 +42,13 @@ Water access correlates with 28% higher average household income
 
 
 ### Deep dive analysis
-1. Income Disparity: States like California and New York have significantly higher average incomes than states like Mississippi and Arkansas.
+1. Income Disparity: States like District of Columbia and Connecticut have significantly higher average incomes than states like Mississippi and Puerto Rico.
 
-2. Land and Water Analysis: States with larger water areas tend to have higher average incomes, possibly due to urban density and economic opportunities.
+2. Land and Water Analysis: A correlation coefficient of 0.136 indicates a weak positive correlation between water area and household income in this dataset.
 
-3. Income by Type: Income type analysis revealed that employment income dominates, but investment income contributes significantly in higher-income regions.
+This suggests that while there is a slight positive relationship, it is not strong enough to conclude that more water area directly leads to higher household income. Other factors may be influencing the income levels in these states.
+
+3. Income by Type: Income type analysis revealed that CDP income dominates following by track.
 
 4. Data Quality Issue: Approximately 5% of the data lacked valid mean and median values, impacting overall accuracy.
 

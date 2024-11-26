@@ -36,7 +36,8 @@ State-level income gap of $36,753 between highest (NJ: $82,545) and lowest (MS: 
 Settlement type impacts income: Boroughs ($72,450) outperform Cities ($65,320) and Townships ($58,890)
 Water access correlates with 28% higher average household income
 
-![house income diagram](https://github.com/user-attachments/assets/3c219d58-91e8-4458-9e77-fde6f13f8adf)
+![house income diagram](https://github.com/user-attachments/assets/c01da843-850c-4c34-a1b6-0462badf9e72)
+
 
 
 

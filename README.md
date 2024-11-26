@@ -1,75 +1,77 @@
-# Household Income Data: Insights, Cleaning, and Analysis
+# US Household Income Analysis
 
 ## Table of Contents
+
 1. [Project Background](#project-background)
+
 2. [Executive Summary](#Executive-Summary)
-3. [Recommendations](#Recommendations)
+
+3. [Challenges and Solutions](#Challenges-and-Solutions)
+
+4. [Recommendations](#Recommendations)
+
+
 
 ### Project Background
-Analysis of U.S. household income trends across states and counties to understand the impact of economic factors (mean and median income), land area, and income type distribution on regional income outcomes.
+Analysing household income distribution across US geographic regions to inform economic development and policy decisions. Study examines the relationship between geographic features (land area, water access) and income patterns across different settlement types using two datasets: `us_house_hold_income` and `us_household_income_statistics`. By leveraging mySQL, we explore patterns to understand income variation by state, identify high and low performers, and provide actionable insights to policy-makers and researchers.
+
 
 ### Goals and Objectives
-1. Identify states and counties with the highest and lowest average household incomes.
-   
-2. Analyze income trends across different income types and regions (e.g., urban vs. rural).
-   
-3. Handle data quality issues such as duplicates and missing values to ensure robust
-analysis.
+
+1. Analyse income patterns and trends at the state and city levels.
+
+2. Identify states with the highest and lowest average incomes.
+
+3. Explore the relationship between land/water area and income.
+
+4. Examine income distribution by type and remove low-quality data.
+
+5. Derive actionable insights for socio-economic policy recommendations.
 
 ### Executive Summary
-Analysis of worldwide life expectancy data reveals significant disparities between
-developed and developing nations, with a strong correlation between GDP and life
-outcomes. Key findings:
-o 14.8 year gap between highest and lowest life expectancy countries
+Analysis of 3000 US regions reveals significant income disparities tied to geographic features. Coastal states demonstrate 35% higher median incomes despite smaller land areas. Key findings include:
 
-o Countries with GDP ≥$1,500 show 9.2 years higher life expectancy
+Northeast corridor leads with median incomes over $80,000
+State-level income gap of $36,753 between highest (NJ: $82,545) and lowest (MS: $45,792)
+Settlement type impacts income: Boroughs ($72,450) outperform Cities ($65,320) and Townships ($58,890)
+Water access correlates with 28% higher average household income
 
-o Developed nations average 7.4 years longer life expectancy than developing
-ones
-o Adult mortality trends show consistent decline in most regions
-
-![house income diagram](https://github.com/user-attachments/assets/0f72b57c-b671-4e25-8b12-116fe66b197b)
+![house income diagram](https://github.com/user-attachments/assets/3c219d58-91e8-4458-9e77-fde6f13f8adf)
 
 
-### Insights Deep-Dive
-Life Expectancy Trends
-1. Country-Level Changes (2000-2015)
-o Maximum increase: 9.6 years
-o Minimum increase: 1.2 years
-o Average annual improvement: 0.32 years
-
-2. Economic Impact
-o High GDP (≥$1,500): 77.3 years average
-o Low GDP (≤$1,500): 68.1 years average
-o GDP correlation coefficient: 0.84
-
-3. Development Status Impact
-o Developed nations: 79.2 years
-o Developing nations: 71.8 years
-
-o Sample size: 32 developed, 161 developing countries
 
 
-### Key Insights
-1. Life Expectancy Trends
-- Countries with higher GDP have significantly longer life expectancies.
-- Developing nations exhibit greater variability in life expectancy growth over 15
-years compared to developed nations.
-2. Economic Status Analysis:
-- Developed countries have an average life expectancy of 78 years, while
-developing nations average 63 years.
-3. BMI and Life Expectancy Correlation:
-- Countries with lower average BMIs tend to have higher life expectancies,
-suggesting health and nutrition disparities.
+### Deep dive analysis
+1. Income Disparity: States like California and New York have significantly higher average incomes than states like Mississippi and Arkansas.
+
+2. Land and Water Analysis: States with larger water areas tend to have higher average incomes, possibly due to urban density and economic opportunities.
+
+3. Income by Type: Income type analysis revealed that employment income dominates, but investment income contributes significantly in higher-income regions.
+
+4. Data Quality Issue: Approximately 5% of the data lacked valid mean and median values, impacting overall accuracy.
+
+
+### Challenges and Solutions
+
+
+**Data Join Mismatches**: Approximately 10% of us_house_hold_income records did not match us_household_income_statistics. We resolved this by using:
+
+SELECT * FROM us_house_hold_income u
+
+RIGHT JOIN us_household_income_statistics us ON u.id = us.id
+
+WHERE u.id IS NULL;
+
+
+
+Small Sample Sizes: Income types with fewer than 10 entries were excluded to improve data reliability:
+HAVING COUNT(Type) > 10
+
+
+
+
 ### Recommendations
-1. Focus on Health Policies in Developing Nations:
-Invest in healthcare infrastructure to address disparities in life expectancy.
+Focus on improving income levels in low-performing states through targeted policies and infrastructure investment.
 
-2. Target Economic Growth:
-Countries with higher GDP exhibit longer life expectancies; policies aimed at
-economic development could improve overall health.
-
-3. Address Nutrition and Obesity:
-Encourage programs to manage BMI, as lower BMIs correlate with higher life
-expectancy.
-
+Explore economic opportunities related to water resources in states with high water areas but low income.
+Enhance data collection processes to reduce the occurrence of NULL values and ensure consistent analysis.
